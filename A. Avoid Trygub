@@ -1,0 +1,80 @@
+//   __________________
+//  | ________________ |
+//  ||          ____  ||
+//  ||   /\    |      ||
+//  ||  /__\   |      ||
+//  || /    \  |____  ||
+//  ||________________||
+//  |__________________|
+//  \###################\
+//   \###################\
+//    \        ____       \
+//     \_______\___\_______\
+// An AC a day keeps the doctor away.
+
+// #include<bits/stdc++.h>
+#include<iostream>
+#include<vector>
+#include<string.h>
+#include<algorithm>
+#include<cstdlib>
+#include<math.h>
+#include<map>
+#include<set>
+#include <numeric>
+#include <cstring>
+#include <queue>
+#include<unordered_set>
+#include <climits>
+#define PI 3.1415926535897932384626
+#define e 2.7182818284590452353602874713527
+using namespace std;
+
+int fast_pow(int n, int k) 
+{
+    int res = 1;
+    while(k > 0) {
+        if(k % 2) res = (res * 1LL * n) % 1000000007;
+        n = (n * 1LL * n) % 1000000007;
+        k /= 2;
+    }
+    return res;
+}
+
+int inv_mod(int n) 
+{
+  return fast_pow(n, 1000000007-2);
+}
+
+int main()
+{
+	#ifndef ONLINE_JUDGE
+		freopen("input.txt","r",stdin);
+		freopen("output.txt","w",stdout);
+	#endif
+		int t;
+		cin>>t;
+		while(t--)
+		{ 
+      
+      int n;
+      cin>>n;
+      char arr[n+1];
+      for(int i=0;i<n;i++)
+        cin>>arr[i];
+
+       sort(arr,arr+n);
+      
+      for(int i=0;i<n;i++)
+        cout<<arr[i];
+
+                  
+      cout<<endl;
+    }
+
+    
+    
+    return 0;
+  }
+	
+
